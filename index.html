@@ -31,6 +31,7 @@
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/animate.css" />
 
     <style>
         /* 方图 */
@@ -163,6 +164,12 @@
                                 </ul>
                             </li>
                         </ul>
+                        <form class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
                     </div>
                 </div>
             </nav>
@@ -173,7 +180,7 @@
 
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -220,7 +227,7 @@
 
         <!-- START THE FEATURETTES -->
 
-        <div class="row featurette">
+        <div class="row featurette wow fadeInUpBig ">
             <div class="col-md-7">
                 <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
                 <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
@@ -317,15 +324,25 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="./assets/js/vendor/jquery.min.js"><\/script>')
-    </script>
+    <script type="text/javascript " src="./assets/js/jquery-1.11.0.js "></script>
     <script src="./dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="./assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!--引入动画js插件(结合annimate.css使用)-->
+    <script src="./assets/js/wow.min.js "></script>
+
+
+    <script>
+        /*导航缩小后会遮住页面，选择要去的区域后隐藏导航的下拉框*/
+        $('.navbar-collapse a').click(function() {
+            $('.navbar-collapse').collapse('hide'); /*向上折叠隐藏*/
+        });
+        //动画
+        new WOW().init();
+    </script>
 </body>
 
 </html>
