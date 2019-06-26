@@ -56,24 +56,8 @@
         }
         /*购物指南*/
         
-        .w {
-            width: 1190px;
-            margin: 0 auto;
-        }
-        
         .help {
-            height: 180px;
-            /*background-color: pink;*/
-            padding-top: 20px;
-            /*因为一开始量了高*/
             margin-bottom: 10px;
-        }
-        
-        .help dl {
-            float: left;
-            /*不用担心清除浮动，父亲给了高*/
-            width: 195px;
-            /*宽度剩余法，文字默认上顶部左部对齐。不用margin因为IE6双倍边距问题，盒子浮动给了margin，100变200*/
         }
         
         .help dt {
@@ -233,7 +217,11 @@
                 <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
             </div>
             <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+                <video width="500" height="450" controls>
+                    <source src="./images/video1.mp4" type="video/mp4">
+                   
+                    您的浏览器不支持 HTML5 video 标签。
+                  </video>
             </div>
         </div>
 
@@ -274,11 +262,11 @@
         <!-- /END THE FEATURETTES -->
 
         <!-- 更多+联系我们 -->
-        <div id="concat" class="w help">
+        <div id="concat" class="row help">
             <!-- dl>dt+dd -->
             <!-- dl>dt+dd*6>a -->
 
-            <dl>
+            <dl class="col-lg-3">
                 <dt>联系我们</dt>
                 <dd>热线：17864212766</dd>
                 <dd>微信号：</dd>
@@ -286,23 +274,20 @@
                 <dd>小程序</dd>
 
             </dl>
-            <dl>
+            <dl class="col-lg-3">
                 <dt>帮助中心</dt>
                 <dd><a href="#">购物流程</a></dd>
                 <dd><a href="#">会员介绍</a></dd>
                 <dd><a href="#">常见问题</a></dd>
 
             </dl>
-            <dl>
-                <dt>关于我们</dt>
-                <dd><a href="#">品牌理念</a></dd>
-            </dl>
-            <dl>
+            <dl class="col-lg-3">
                 <dt>联系合作</dt>
+                <dd><a href="#">品牌理念</a></dd>
                 <dd><a href="#">诚招加盟</a></dd>
             </dl>
 
-            <dl class="cover">
+            <dl class="cover col-lg-3">
                 <dt>门店介绍</dt>
                 <dd class="info"><a href="#">京东向全国64is奇偶爱京东理解诶见我手机诶哦我见覅偶</a></dd>
                 <dd class="more"><a href="#">查看详情></a></dd>
@@ -313,7 +298,7 @@
 
         <!-- FOOTER -->
         <footer>
-            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p class="pull-right"><a href="#">返回顶部</a></p>
             <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
         </footer>
 
